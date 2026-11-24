@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#001428</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF1744</color>
+    <color name="ultron_cyan">#00E5FF</color>
+    <color name="ultron_red">#FF1744</color>
+    <color name="ultron_bg">#000000</color>
+</resources>

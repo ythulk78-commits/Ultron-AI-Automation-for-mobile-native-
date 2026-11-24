@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ultron Heart"
+            android:textColor="#FF1744"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Powers Ultron's AI brain (Phase 4 LLM fallback)"
+            android:textColor="#00E5FF"
+            android:textSize="12sp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OpenRouter API Key"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/api_key_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="sk-or-v1-..."
+            android:textColorHint="#8800E5FF"
+            android:textColor="#FFFFFF"
+            android:inputType="textPassword"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Model name"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type any OpenRouter model id - free or paid"
+            android:textColor="#8800E5FF"
+            android:textSize="11sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/model_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="meta-llama/llama-3.1-8b-instruct:free"
+            android:textColorHint="#8800E5FF"
+            android:textColor="#FFFFFF"
+            android:inputType="text"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#222222"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telegram Bridge"
+            android:textColor="#FF1744"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Control Ultron from Telegram. Locked until you pair it - see below."
+            android:textColor="#00E5FF"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bot Token (from @BotFather)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/telegram_token_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="123456789:AA..."
+            android:textColorHint="#8800E5FF"
+            android:textColor="#FFFFFF"
+            android:inputType="textPassword"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/telegram_save_start_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Token &amp; Start Bridge" />
+
+        <Button
+            android:id="@+id/telegram_stop_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Stop Bridge" />
+
+        <TextView
+            android:id="@+id/telegram_status_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bridge: stopped  |  Paired: no"
+            android:textColor="#00E5FF"
+            android:textSize="12sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#222222"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pair a Telegram chat"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PIN sirf isi screen par dikhta hai - kabhi Telegram pe nahi bheja jata. 5 minute ke liye valid, ek hi baar chalega. Isko apne Telegram chat me bot ko bhejo - jo pehla chat sahi PIN bhejega wahi hamesha ke liye pair ho jayega, baaki sab ignore honge."
+            android:textColor="#8800E5FF"
+            android:textSize="11sp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/telegram_generate_pin_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Remote PIN" />
+
+        <TextView
+            android:id="@+id/telegram_pin_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FF1744"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/telegram_reset_pairing_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Reset Pairing (unpair current chat)" />
+
+    </LinearLayout>
+</ScrollView>

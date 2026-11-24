@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hud_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible"
+    android:background="#000000">
+
+    <!-- Animated rings, centered, behind everything -->
+    <com.ultron.assistant.HudRingsView
+        android:id="@+id/hud_rings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Top bar: ULTRON title + status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/hud_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ULTRON"
+            android:textColor="#FF1744"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15" />
+
+        <TextView
+            android:id="@+id/hud_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Systems online"
+            android:textColor="#00E5FF"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Left capability panel, purely decorative HUD flavor -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:background="#33001428"
+        android:padding="10dp">
+
+        <TextView style="@style/HudPanelLabel" android:text="VOICE" />
+        <TextView style="@style/HudPanelLabel" android:text="AUTOMATION" />
+        <TextView style="@style/HudPanelLabel" android:text="SCHEDULE" />
+        <TextView style="@style/HudPanelLabel" android:text="AI BRAIN" />
+    </LinearLayout>
+
+    <!-- Close button -->
+    <TextView
+        android:id="@+id/hud_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="20dp"
+        android:padding="8dp"
+        android:text="✕"
+        android:textColor="#00E5FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Bottom sheet: conversation log + text input, so voice AND typed commands both show here -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/hud_chat_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="140dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/hud_chat_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="12dp" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#CC001018"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/hud_text_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Type a command..."
+                android:textColorHint="#6600E5FF"
+                android:textColor="#FFFFFF"
+                android:background="@null"
+                android:inputType="text"
+                android:imeOptions="actionSend"
+                android:maxLines="3" />
+
+            <TextView
+                android:id="@+id/hud_mic_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:padding="10dp"
+                android:text="🎙"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/hud_send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:padding="10dp"
+                android:text="➤"
+                android:textColor="#00E5FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

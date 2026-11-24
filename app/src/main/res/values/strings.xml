@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ULTRON</string>
+    <string name="accessibility_service_description">Ultron uses this to see screen content and tap/type on your behalf so it can open apps, send messages, and automate tasks by voice or text command. It does not read or store anything outside of executing your commands.</string>
+</resources>
+
